@@ -15,15 +15,15 @@ def typing (line):
 
 
 def yodawho ():
-    return ["The one you dislike most, who is, hmm?", "With which fictional being most you resonate, hmm?", "Most likely to be arrested for stealing toilet paper, who do you know, hmmm?", "From a favorite movie of yours, name a character, you must?"]
+    return ["The one you dislike most, who is, hmm?\n", "With which fictional being most you resonate, hmm?\n", "Most likely to be arrested for stealing toilet paper, who do you know, hmmm?\n", "From a favorite movie of yours, name a character, you must?\n"]
 def yodawhat ():
-    return ["To break down the front door of a house, use what would you, hmm?", "An object that holds magical powers, name it you must.", "In your favorite sport, used an object is. Name it, you shall.", "Daily you use an object, yes? Name it now, you must."]
+    return ["To break down the front door of a house, use what would you, hmm?\n", "An object that holds magical powers, name it you must.\n", "In your favorite sport, used an object is. Name it, you shall?\n", "Daily you use an object, yes? Name it now, you must?\n"]
 def yodawhere ():
-    return ["Go you have always wanted, where is it, hmm?", "For peace and quiet, go where would you, yes?", "Your favorite place to spend time, where is, hmmm?", "For adventure and exploration, go where would you, hmm?"]
+    return ["Go you have always wanted, where is it, hmm?\n", "For peace and quiet, go where would you, yes?\n", "Your favorite place to spend time, where is, hmmm?\n", "For adventure and exploration, go where would you, hmm?\n"]
 def yodawhy ():
-    return ["Become a Jedi, why do you wish, hmm?", "Into your house, break someone would, why, hmmm?", "Seven voice messages and missed calls, your mother leaves… why, hmm? Trouble sensed, she has.", "With toothbrushes and Ladder logic, Darth Maul attacks CEI… why, hmm? Strange, this is. Powerful the plan must be."]
+    return ["Become a Jedi, why do you wish, hmm?\n", "Into your house, break someone would, why, hmmm?\n", "Seven voice messages and missed calls, your mother leaves… why, hmm? Trouble sensed, she has.\n", "With toothbrushes and Ladder logic, Darth Maul attacks CEI… why, hmm? Strange, this is. Powerful the plan must be.\n"]
 def yodahow ():
-    return ["Into Area 51, break how would you, hmm? Secrets it holds, yes…", "Jar Jar, a Sith he seems… defeat him, how would you, hmmm?", "Lead America as president, how would you, yes? Strong the Force in politics must be.", "A starship, build you would… with tennis racket and dairy-free cheese block?"]
+    return ["Into Area 51, break how would you, hmm? Secrets it holds, yes…\n", "Jar Jar, a Sith he seems… defeat him, how would you, hmmm?\n", "Lead America as president, how would you, yes? Strong the Force in politics must be.\n", "A starship, build you would… with tennis racket and dairy-free cheese block?\n"]
 
 def gandalf():
     stats = dict()
@@ -192,7 +192,7 @@ def mickey():
 
 def yoda():
     story = list()
-    line = ("Welcome to the Jedi Temple, hmm? Jedi training, receive you would like? Yes, hmmm.")
+    line = ("Welcome to the Jedi Temple, hmm? Jedi training, receive you would like? Yes, hmmm.\n")
     typing (line)
     user = input("(y/n): ")
     if user == "y":
@@ -218,8 +218,28 @@ def yoda():
         typing (line)
         user = input ()
         story.append(user)
+        line = ("See you now, I do, and your story. Your story, it is:\n")
+        typing (line)
+        who = story[0]
+        what = story[1]
+        where = story [2]
+        why = story [3]
+        how = story [4]
+        line = (f"{who} at {where} decided to {what} because {why}, and to accomplish this {how}.\n")
+        typing (line)
+        line = ("Understand the importance of your story, do you?\n")
+        typing (line)
+        user = input ("(y/n): ")
+        if user == "y":
+            line = ("Very good, hmm. Begin your training, we will—starting tomorrow!\n")
+            typing (line)
+
+        if user == "n":
+            line = ("Too old you are, and understanding you lack. Train you, I no longer can.\n")
+            typing (line)
+            line = None
     if user == "n":
-        line = ("Agree with your decision, the Council does. Good day, and farewell… hmmm.")
+        line = ("Agree with your decision, the Council does. Good day, and farewell… hmmm.\n")
         typing (line)
 
 

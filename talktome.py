@@ -253,6 +253,39 @@ def jarvis():
     typing (line)
     line = ("(1) The President\n(2) A Friend\n(3) Dave Oliver\n")
     typing (line)
+    user = int(input("Type number here: "))
+    if user == 1:
+        line = ("right away sir!\nI have located the presidents computer IPv4 156.221.56.82\nHacking..............................\nAccess granted!\nI have access to all bills and Executive Orders.\nWould you like to add a new Executive order and make your own Law?\n")
+        typing (line)
+        user = input("(y/n): ")
+        if user == "y":
+            line = ("Yes sir! What would you like the new law to be?\n")
+            typing (line)
+            new_law = input()
+            line = (f"Great choice sir! I am changing the law now\nComputing........................................\nHack successful! Well done sir the new law has been changed!\nUnited States News: According to dirrect orders from the president it is now mandatory that: {new_law}, This new Law will be enfourced by the Local police.")
+            typing (line)
+            user = None
+        if user == "n":
+            line = ("Would you like to upload a virous to his computer?\n")
+            typing (line)
+            user = input ("(y/n): ")
+            if user == "y":
+                line = ("Very good sir! Uploading it now\nDownloading...............................................\nDownload complete.\nBreaking news: The government has been hacked, we will be shutting down until further notice.\n")
+                typing (line)
+                user = None
+            if user == "n":
+                line = ("Sir, the government has blocked our access, we have lost all connection.\n")
+                typing (line)
+                user = None
+    if user == 2:
+        line = ("Yes sir! What is the name of your friend?\n")
+        typing (line)
+        name = input()
+        line = (f"Very good sir, I have located {name}'s computer IPv4 186.154.18.4\nGaining Access.......................\nWere in sir!\nShall we prank him sir?\n")
+        typing (line)
+        
+    if user == 3:
+        print (nexter)
 
 
 def menu():

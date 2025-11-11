@@ -6,13 +6,24 @@ Title: Talk to me
 
 """
 import time
-
+import random
 
 def typing (line):
     for char in line:
         print(char, end='', flush=True)
         time.sleep(0.05)  # Adjust the delay (in seconds) to control typing speed
 
+
+def yodawho ():
+    return ["The one you dislike most, who is, hmm?", "With which fictional being most you resonate, hmm?", "Most likely to be arrested for stealing toilet paper, who do you know, hmmm?", "From a favorite movie of yours, name a character, you must?"]
+def yodawhat ():
+    return ["To break down the front door of a house, use what would you, hmm?", "An object that holds magical powers, name it you must.", "In your favorite sport, used an object is. Name it, you shall.", "Daily you use an object, yes? Name it now, you must."]
+def yodawhere ():
+    return ["Go you have always wanted, where is it, hmm?", "For peace and quiet, go where would you, yes?", "Your favorite place to spend time, where is, hmmm?", "For adventure and exploration, go where would you, hmm?"]
+def yodawhy ():
+    return ["Become a Jedi, why do you wish, hmm?", "Into your house, break someone would, why, hmmm?", "Seven voice messages and missed calls, your mother leaves… why, hmm? Trouble sensed, she has.", "With toothbrushes and Ladder logic, Darth Maul attacks CEI… why, hmm? Strange, this is. Powerful the plan must be."]
+def yodahow ():
+    return ["Into Area 51, break how would you, hmm? Secrets it holds, yes…", "Jar Jar, a Sith he seems… defeat him, how would you, hmmm?", "Lead America as president, how would you, yes? Strong the Force in politics must be.", "A starship, build you would… with tennis racket and dairy-free cheese block?"]
 
 def gandalf():
     stats = dict()
@@ -180,7 +191,37 @@ def mickey():
 
 
 def yoda():
-    print ()
+    story = list()
+    line = ("Welcome to the Jedi Temple, hmm? Jedi training, receive you would like? Yes, hmmm.")
+    typing (line)
+    user = input("(y/n): ")
+    if user == "y":
+        line = ("Splendid, hmm. Teach you the first lesson of the Jedi, I will. Begin it does… with looking within, oneself must.\n")
+        typing (line)
+        line = random.choice(yodawho())
+        typing (line)
+        user = input()
+        story.append(user)
+        line = random.choice(yodawhat())
+        typing (line)
+        user = input()
+        story.append(user)
+        line = random.choice(yodawhere())
+        typing (line)
+        user = input()
+        story.append(user)
+        line = random.choice(yodawhy())
+        typing (line)
+        user = input()
+        story.append(user)
+        line = random.choice(yodahow())
+        typing (line)
+        user = input ()
+        story.append(user)
+    if user == "n":
+        line = ("Agree with your decision, the Council does. Good day, and farewell… hmmm.")
+        typing (line)
+
 
 
 def jarvis():

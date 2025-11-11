@@ -24,6 +24,8 @@ def yodawhy ():
     return ["Become a Jedi, why do you wish, hmm?\n", "Into your house, break someone would, why, hmmm?\n", "Seven voice messages and missed calls, your mother leaves… why, hmm? Trouble sensed, she has.\n", "With toothbrushes and Ladder logic, Darth Maul attacks CEI… why, hmm? Strange, this is. Powerful the plan must be.\n"]
 def yodahow ():
     return ["Into Area 51, break how would you, hmm? Secrets it holds, yes…\n", "Jar Jar, a Sith he seems… defeat him, how would you, hmmm?\n", "Lead America as president, how would you, yes? Strong the Force in politics must be.\n", "A starship, build you would… with tennis racket and dairy-free cheese block?\n"]
+def yodares ():
+    return ["A story that is, I suppose. Interesting, it surely is.\n", "Inspirational, this story is. Mmm.\n", "Such a story, heard I have not. Grave danger in your training, I sense.\n", "Foreshadow the Jedi you shall be, this story does.\n"]
 
 def gandalf():
     stats = dict()
@@ -227,17 +229,19 @@ def yoda():
         how = story [4]
         line = (f"{who} at {where} decided to {what} because {why}, and to accomplish this {how}.\n")
         typing (line)
+        line = random.choice(yodares())
+        typing (line)
         line = ("Understand the importance of your story, do you?\n")
         typing (line)
         user = input ("(y/n): ")
         if user == "y":
-            line = ("Very good, hmm. Begin your training, we will—starting tomorrow!\n")
+            line = ("Very good, hmm. Begin your training, we will!\n")
             typing (line)
-
+            user = None
         if user == "n":
             line = ("Too old you are, and understanding you lack. Train you, I no longer can.\n")
             typing (line)
-            line = None
+            user = None
     if user == "n":
         line = ("Agree with your decision, the Council does. Good day, and farewell… hmmm.\n")
         typing (line)
@@ -245,7 +249,10 @@ def yoda():
 
 
 def jarvis():
-    print ()
+    line = ("Hello sir, It's good to see you again!\nI have an extencive data base with access to any and all systems.\nOut of the three options below who's system would you like to hack into?\n")
+    typing (line)
+    line = ("(1) The President\n(2) A Friend\n(3) Dave Oliver\n")
+    typing (line)
 
 
 def menu():

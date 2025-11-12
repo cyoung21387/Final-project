@@ -281,11 +281,29 @@ def jarvis():
         line = ("Yes sir! What is the name of your friend?\n")
         typing (line)
         name = input()
-        line = (f"Very good sir, I have located {name}'s computer IPv4 186.154.18.4\nGaining Access.......................\nWere in sir!\nShall we prank him sir?\n")
+        line = (f"Very good sir, I have located {name}'s computer IPv4 186.154.18.4\nGaining Access.......................\nWere in sir!\nShall we prank him?\n")
         typing (line)
-        
+        user = input ("(y/n): ")
+        if user == "y":
+            line = ("Installing scareware and Virous Hoax......................................\nInstall successful! Well done sir!\n")
+            typing (line)
+            user = None
+        if user == "n":
+            line = ("Very well sir, Have a good day!\n")
+            typing (line)
+            user = None
     if user == 3:
-        print (nexter)
+        line = ("Yes sir, Locating his computer now.....................\nHe has an impressive variable proxy network set up.............\nfailed...........\nfailed.............\nfailed.............\naccess granted. Were in sir.\nshall we comense the fake hack?\n")
+        typing (line)
+        user = input ("(y/n): ")
+        if user == "y":
+            line = ("Right away sir, Installing scareware and Virous hoax........................\nMy virous was stoped by his fire wall\nI'll try again........Im sorry sir I'm experiancing a hack form his sytem I ddofg348q743gf98qwf7hf.....................\n")
+            typing (line)
+            user = None
+        if user == "n":
+            line = ("Good choice sir, He had a very complex system and I don't think that would have gone well.\n")
+            typing (line)
+            user = None
 
 
 def menu():

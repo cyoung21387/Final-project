@@ -12,6 +12,13 @@ def typing (line):
     for char in line:
         print(char, end='', flush=True)
         time.sleep(0.05)  # Adjust the delay (in seconds) to control typing speed
+def yesorno():
+    while True:
+        user = yesorno ().lower().strip()
+        if user in ("y", "n"):
+            return user
+        else:
+            print("Please type y or n.")
 
 
 def yodawho ():
@@ -35,7 +42,7 @@ def gandalf():
     line = "I am taking the hobbits to eisengard. Would you like to accompany us on our unfathomable quest of adventure?\n"
     typing(line)
     try:
-        user = input('y/n: ')
+        user = input ("(y/n): ")
         if user == "y":
             line = "wonderful! first on a scale of 1 to 10, 1 being scared and 10 being heroic how comfertable are you around orcs?\n "
             typing (line)
@@ -75,7 +82,7 @@ def gandalf():
                 typing (line)
                 line = ("Would you like a list of things you need to pack?\n")
                 typing (line)
-                user = input("(y/n): ")
+                user = yesorno ()
                 if user == "y" :
                     line = ("Satchel\nTooth past\ntooth brush\nchicken\nBlues clues\nsword\ntoilet paper\nsmoking pipe\nweed\nbeer\ncocaine\ncontract that you didn't read\nlife insurance policy\na will saying that if anything happens to you, all of your belongings go to me!\n")
                     typing (line)
@@ -83,16 +90,18 @@ def gandalf():
                 typing (line)
                 line = ("Are you ready?\n")
                 typing (line)
-                user = input("(y/n): ")
+                user = yesorno ()
                 if user == "y" :
                     line = ("Very good! Pack your things and I'll see you out there! We very much shall pass!!!!!!!!\n")
                     typing (line)
+                    user = None
                 if user == "n" :
                     line = ("Why on earth not?\n")
                     typing (line)
                     user = input()
                     line = ("That is a stupid reason.\nNow you have wasted my time.\nI say to you sir good day.\n")
                     typing (line)
+                    user = None
 
 
         if user == "n":
@@ -112,7 +121,7 @@ def mickey():
     user = input()
     line = ("Well thats nice now isn't it.\noh no, I just got a call from goofy.\nHe feel on his bike and can't get up\nHe must have skiped leg day.\nsay, would you be willing to come help me save goofy?\n")
     typing (line)
-    user = input("(y/n): ")
+    user = yesorno ()
     if user == "y":
         line = ("Oh Boy! thats great!\nFirst things first, we are gonna need some tools to help goofy.\nI'm gonna offer 4 items for each sceaniro and your gonna pick one!\n")
         typing (line)
@@ -128,7 +137,7 @@ def mickey():
             if user == 1:
                 line = ("Perfect! Thats just what he needed.\nSay, do you know how to ride a bike?\n")
                 typing (line)
-                user = input("(y/n): ")
+                user = yesorno ()
                 if user == "y":
                     line = ("Perfect!\nThank you so much for your help and..........What are slaping him in the rear for he ain't a horse.\nThat's it Your fired you little #@!&#@!$@!\n")
                     typing (line)
@@ -156,7 +165,7 @@ def mickey():
             if user == 3:
                 line = ("Um..... Thats a sure interesting chice you made there.\nDon't draw unless you ready boy, I gotta Glock in my pocket and I ain't afraid to use it.\n You wanna go?\n")
                 typing (line)
-                user = input("(y/n): ")
+                user = yesorno ()
                 if user == "y":
                     line = ("ALright, On three........one........two.......THREE***BANG****\nAnd thats why they call it my club house!\n")
                     typing (line)
@@ -169,10 +178,8 @@ def mickey():
                 line = ("Oh no, you stole his bike.\nDon't worry goofy, My sniper missed you but hopfully he wont miss this guy.\n")
                 typing (line)
                 user = None
-
-
         if user == 2:
-            line = ("ALright here's the keys.\nYour going a little fast now, slow it down.\nHey watch out for that TREE\nAWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW.\n Police: Sir your under arrest. Lean over the car I'm taking you into custody.\nMickey: Well, at least thats better than all the other kids that watch my show.\nMickey: I hope they dont find the sniper I hired to shoot down goofy.")
+            line = ("ALright here's the keys.\nYour going a little fast now, slow it down.\nHey watch out for that TREE\nAWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW.\n Police: Sir your under arrest. Lean over the car I'm taking you into custody.\nMickey: Well, at least thats better than all the other kids that watch my show.\nMickey: I hope they dont find the sniper I hired to shoot down goofy.\n")
             typing (line)
         if user == 3:
             line = ("Well, Im not sure what your gonna do with the wrench............why are you looking at me like that.\nHold on now son, you sure you wanna play this game.\nI got a Glock in my back pocket and I'm not affraid to use it.\n******BANG*****\nThats why they call it my club house.\n")
@@ -180,14 +187,13 @@ def mickey():
         if user == 4:
             line = ("Why on earth would you pick the plunger.\nYou could have picked litterally anything else.\nYour grounded.\n")
             typing (line)
-
-
     if user == "n":
-        line = ("Well your just a pice of crap now arn't you.")
+        line = ("Well your just a pice of crap now arn't you.\n")
         typing (line)
         user = input()
-        line = ("Well, it's the truth ain't it.")
+        line = ("Well, it's the truth ain't it.\n")
         typing (line)
+        user = input()
         line = ("I guess we'll agree to disagree you old fart.\n You best be on your way now before I get my boys from the hood up in hear to teach you a lesson.\nDont forget to vist my club house again, It will probably be your last.\n")
         typing (line)
 
@@ -196,7 +202,7 @@ def yoda():
     story = list()
     line = ("Welcome to the Jedi Temple, hmm? Jedi training, receive you would like? Yes, hmmm.\n")
     typing (line)
-    user = input("(y/n): ")
+    user = yesorno ()
     if user == "y":
         line = ("Splendid, hmm. Teach you the first lesson of the Jedi, I will. Begin it does… with looking within, oneself must.\n")
         typing (line)
@@ -233,7 +239,7 @@ def yoda():
         typing (line)
         line = ("Understand the importance of your story, do you?\n")
         typing (line)
-        user = input ("(y/n): ")
+        user = yesorno ()
         if user == "y":
             line = ("Very good, hmm. Begin your training, we will!\n")
             typing (line)
@@ -257,7 +263,7 @@ def jarvis():
     if user == 1:
         line = ("right away sir!\nI have located the presidents computer IPv4 156.221.56.82\nHacking..............................\nAccess granted!\nI have access to all bills and Executive Orders.\nWould you like to add a new Executive order and make your own Law?\n")
         typing (line)
-        user = input("(y/n): ")
+        user = yesorno ()
         if user == "y":
             line = ("Yes sir! What would you like the new law to be?\n")
             typing (line)
@@ -268,7 +274,7 @@ def jarvis():
         if user == "n":
             line = ("Would you like to upload a virous to his computer?\n")
             typing (line)
-            user = input ("(y/n): ")
+            user = yesorno ()
             if user == "y":
                 line = ("Very good sir! Uploading it now\nDownloading...............................................\nDownload complete.\nBreaking news: The government has been hacked, we will be shutting down until further notice.\n")
                 typing (line)
@@ -283,7 +289,7 @@ def jarvis():
         name = input()
         line = (f"Very good sir, I have located {name}'s computer IPv4 186.154.18.4\nGaining Access.......................\nWere in sir!\nShall we prank him?\n")
         typing (line)
-        user = input ("(y/n): ")
+        user = yesorno ()
         if user == "y":
             line = ("Installing scareware and Virous Hoax......................................\nInstall successful! Well done sir!\n")
             typing (line)
@@ -295,7 +301,7 @@ def jarvis():
     if user == 3:
         line = ("Yes sir, Locating his computer now.....................\nHe has an impressive variable proxy network set up.............\nfailed...........\nfailed.............\nfailed.............\naccess granted. Were in sir.\nshall we comense the fake hack?\n")
         typing (line)
-        user = input ("(y/n): ")
+        user = yesorno ()
         if user == "y":
             line = ("Right away sir, Installing scareware and Virous hoax........................\nMy virous was stoped by his fire wall\nI'll try again........Im sorry sir I'm experiancing a hack form his sytem I ddofg348q743gf98qwf7hf.....................\n")
             typing (line)
@@ -337,6 +343,8 @@ def menu():
         if choise == 5:
             print ("Chat has been closed. Have a good day!")
             break
+        else:
+            print ("please select a number 1-5.")
 
 
 def main():

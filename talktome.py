@@ -11,10 +11,10 @@ import random
 def typing (line):
     for char in line:
         print(char, end='', flush=True)
-        time.sleep(0.05)  # Adjust the delay (in seconds) to control typing speed
+        time.sleep(0.05)  
 def yesorno():
     while True:
-        user = yesorno ().lower().strip()
+        user = input("(y/n): ").lower().strip()
         if user in ("y", "n"):
             return user
         else:
